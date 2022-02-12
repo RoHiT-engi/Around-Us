@@ -11,7 +11,9 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
-import {signInWithEmailnPassword } from "../Firebase/Auth"
+import GoogleIcon from "@mui/icons-material/Google";
+import { signInWithEmailnPassword } from "../Firebase/Auth";
+import { Icon } from "@mui/material";
 
 function Copyright(props) {
   return (
@@ -32,12 +34,12 @@ function Copyright(props) {
 }
 const Login = () => {
   const handleSubmit = async (event) => {
-    try{
+    try {
       event.preventDefault();
       const data = new FormData(event.currentTarget);
       await signInWithEmailnPassword(data.get("email"), data.get("password"));
-    }catch(error){
-      alert('Error Occured '+ error)
+    } catch (error) {
+      alert("Error Occured " + error);
     }
     // eslint-disable-next-line no-console
   };
@@ -116,6 +118,17 @@ const Login = () => {
                 sx={{ mt: 3, mb: 2 }}
               >
                 Sign In
+              </Button>
+              <Typography variant="p" mt="2">
+                Login with{" "}
+              </Typography>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                <GoogleIcon />
               </Button>
               <Grid container>
                 <Grid item xs>
