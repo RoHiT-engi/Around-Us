@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap");
 .page {
-  background: linear-gradient(-45deg, #93b7e0, #90ced3, #f0d9da, #f7bbbb);
+  background: linear-gradient(-45deg, #93b7e0, #90ced3, #a0d8fd, #95fbff);
   background-size: 400% 400%;
-  animation: gradient 3s ease infinite;
+  animation: gradient 10s ease infinite;
   height: 100vh;
 }
 .title {
-  margin-top: 10vh;
+  padding-top: 10vh;
   font-size: 20px;
   text-align: center;
   font-family: "Noto Sans TC", sans-serif !important;
@@ -15,11 +15,11 @@
 
 #a {
   font-family: "Montserrat", sans-serif;
-  font-size: 40px;
+  font-size: 25px;
 }
 #b {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 40px;
+  font-size: 26px;
 }
 
 @keyframes gradient {
@@ -37,6 +37,7 @@
     font-size: 12px;
   }
 }
+
 .blog_post {
   position: relative;
   padding: 4rem 2rem 4rem 2rem;
@@ -49,27 +50,25 @@
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
 }
 
-#h4 {
+.blog_h4 {
   margin: 0 0 0.5rem 0;
   color: #999;
   font-size: 1.25rem;
 }
 
-#h1 {
+.blog_h1 {
   margin: 0 0 1rem 0;
-  font-size: 2.5rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   color: #333;
 }
-
-#h2 {
+.blog_h2 {
   margin: 0 0 1rem 0;
   font-size: 2rem;
   letter-spacing: 0.5px;
   color: rgb(116, 111, 111);
 }
-
-#p {
+.blog_p {
   margin: 0 0 4.5rem 2rem;
   font-size: 1.5rem;
   color: #333;

@@ -5,17 +5,18 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
+import HomeIcon from "@mui/icons-material/Home";
+import { Link } from "react-router-dom";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import GoogleIcon from "@mui/icons-material/Google";
-import { signInWithEmailnPassword ,signInWithGoogle } from "../Firebase/Auth";
+import { signInWithEmailnPassword, signInWithGoogle } from "../Firebase/Auth";
 import { Alert, Icon } from "@mui/material";
-import {useNavigate} from 'react-router-dom';
-import  "../css/Login.css"
+import { useNavigate } from "react-router-dom";
+import "../css/Login.css";
 
 function Copyright(props) {
   return (
@@ -26,9 +27,12 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://github.com/RoHiT-engi/Around-Us/blob/main/LICENSE">
-        Your Website
-      </Link>{" "}
+      <a
+        color="inherit"
+        href="https://github.com/RoHiT-engi/Around-Us/blob/main/LICENSE"
+      >
+        Around-Us
+      </a>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
@@ -41,7 +45,7 @@ const Login = () => {
       event.preventDefault();
       const data = new FormData(event.currentTarget);
       await signInWithEmailnPassword(data.get("email"), data.get("password"));
-      history('/');
+      history("/");
     } catch (error) {
       alert("Error Occured " + error);
     }
@@ -50,8 +54,16 @@ const Login = () => {
 
   return (
     <div>
+      <div>
+        <Link to="/">
+          <button size="lg" className="btn btn-outline-dark back-btn">
+            <i className="fa fa-angle-double-left"></i> Back{" "}
+          </button>
+        </Link>
+      </div>
       <Grid container component="main" sx={{ height: "100vh" }}>
         <CssBaseline />
+
         <Grid
           item
           xs={false}
@@ -59,7 +71,7 @@ const Login = () => {
           md={7}
           sx={{
             backgroundImage:
-              "url(https://c.tenor.com/x8v1oNUOmg4AAAAM/rickroll-roll.gif)",
+              "url(https://c.tenor.com/x45c996Fj4UAAAAC/imposter-the-simpsons.gif)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
@@ -79,9 +91,11 @@ const Login = () => {
               alignItems: "center",
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-              <LockOutlinedIcon />
-            </Avatar>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+                <LockOutlinedIcon />
+              </Avatar>
+            </Link>
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
@@ -131,28 +145,27 @@ const Login = () => {
                 fullWidth
                 variant="contained"
                 onClick={async () => {
-                  try{
+                  try {
                     await signInWithGoogle();
-                    history('/');
-                  }catch(e){
+                    history("/");
+                  } catch (e) {
                     Alert("Error Occured " + e);
                   }
-
-                } }
+                }}
                 sx={{ mt: 3, mb: 2 }}
               >
                 <GoogleIcon />
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="/forgotpwd" variant="body2">
+                  <a href="/forgotpwd" variant="body2">
                     Forgot password?
-                  </Link>
+                  </a>
                 </Grid>
                 <Grid item>
-                  <Link href="/signup" variant="body2">
+                  <a href="/signup" variant="body2">
                     {"Don't have an account? Sign Up"}
-                  </Link>
+                  </a>
                 </Grid>
               </Grid>
               <Copyright sx={{ mt: 5 }} />

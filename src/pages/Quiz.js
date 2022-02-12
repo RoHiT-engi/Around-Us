@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import { Widget } from "@typeform/embed-react";
 
 const Quiz = () => {
   return (
@@ -8,9 +9,7 @@ const Quiz = () => {
       Quiz starts here{" "}
 
 
-      <div>
-        Question
-      </div>
+      
     </div>
   );
 };
