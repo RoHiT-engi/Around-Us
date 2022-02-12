@@ -35,25 +35,23 @@ function Copyright(props) {
 
 const SignUp = () => {
   const handleSubmit = async (event) => {
-    const data = new FormData(event.currentTarget);
-    console.log(data.get("email"));
-    console.log(data.get("password"));
-    // try{
-    //   event.preventDefault();
-    //   const data = new FormData(event.currentTarget);
-    //   if(data.get("password") === data.get("confirmPassword")){
-    //     if(passwordCheck(data.get("password"))){
-    //       await signUpWithEmailAndPassword(data.get("email"), data.get("password"));
-    //     }else{
-    //       Alert("Password is not valid")
-    //     }
-    //   }else{
-    //     Alert("Confirm your Password")
-    //   }
+    try{
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      if(data.get("password") === data.get("confirmPassword")){
+        const status = passwordCheck(data.get("password"))
+        if(status === true){
+          await signUpWithEmailAndPassword(data.get("email"), data.get("password"));
+        }else{
+          alert("Password is not valid "+status)
+        }
+      }else{
+        alert("Confirm your Password ")
+      }
       
-    // }catch(error){
-    //   alert(error)
-    // }
+    }catch(error){
+      alert(error)
+    }
   };
 
   return (
@@ -154,7 +152,7 @@ const SignUp = () => {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/login" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>

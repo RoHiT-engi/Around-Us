@@ -1,7 +1,6 @@
 import { sendPasswordResetinEmail } from "../Firebase/Auth";
 import { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
-import { Alert } from "@mui/material";
 
 
 const Forgotpwd = ()=>{
@@ -10,7 +9,7 @@ const Forgotpwd = ()=>{
     const submit = async ()=>{
         try{
             await sendPasswordResetinEmail(email);
-            Alert("Check your email for reset link")
+            alert("Check your email for reset link")
             history('/login')
         }catch(e){
             alert(e)

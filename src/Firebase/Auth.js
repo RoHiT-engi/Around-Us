@@ -31,6 +31,7 @@ const logout = () => {
 };
 
 export {
+  app,
   auth,
   signInWithGoogle,
   signUpWithEmailAndPassword,
