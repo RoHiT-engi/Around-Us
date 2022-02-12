@@ -24,6 +24,17 @@ const Home = () => {
     <div div className="navMenu">
       {/* Navbar Starts */}
       <Navbar />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
 
       <div className="page">
         .

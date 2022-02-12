@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap");
 .page {
-  background: linear-gradient(-45deg, #ecf2f9, #c8d9eb, #f0d9da, #f9ecec);
+  background: linear-gradient(-45deg, #93b7e0, #90ced3, #f0d9da, #f7bbbb);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 3s ease infinite;
   height: 100vh;
-  
-
 }
 .title {
   margin-top: 10vh;
@@ -21,12 +19,6 @@
 #b {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 40px;
-}
-body {
-  background: linear-gradient(-45deg, #ecf2f9, #c8d9eb, #f0d9da, #f9ecec);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  height: 100vh;
 }
 
 @keyframes gradient {
