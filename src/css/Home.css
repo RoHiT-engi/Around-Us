@@ -12,6 +12,7 @@
   text-align: center;
   font-family: "Noto Sans TC", sans-serif !important;
 }
+
 #a {
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
@@ -31,4 +32,66 @@
   100% {
     background-position: 0% 50%;
   }
+  html {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+  }
+}
+.blog_post {
+  position: relative;
+  padding: 4rem 2rem 4rem 2rem;
+  background: #fff;
+  max-width: 350px;
+  border-radius: 10px;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+}
+
+#h4 {
+  margin: 0 0 0.5rem 0;
+  color: #999;
+  font-size: 1.25rem;
+}
+
+#h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+  color: #333;
+}
+
+#h2 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  color: rgb(116, 111, 111);
+}
+
+#p {
+  margin: 0 0 4.5rem 2rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.btn_primary {
+  border-top: 10px;
+  outline: none;
+  background: linear-gradient(90deg, #66cfff, #6c7fca);
+  float: right;
+
+  margin-right: 2%;
+
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: 1px 10px 2rem rgba(25, 68, 124, 0.5);
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+}
+
+.btn_primary:hover {
+  box-shadow: 0px 5px 1rem rgba(94, 164, 255, 0.5);
 }
