@@ -7,8 +7,8 @@ import "./App.css";
 import Forum from "./components/Forum";
 import Quiz from "./pages/Quiz";
 
-
 import Forgotpwd from "./pages/ForgotpwdScreen";
+import Chats from "./components/Chats";
 
 function App() {
   return (
@@ -21,8 +21,8 @@ function App() {
 
           <Route path="/signup" element={<SignUp />} />
           <Route path="/quiz" element={<Quiz />} />
-          <Route path="/chats" element={<Forum/>} />
-          <Route path="/forgotpwd" element={<Forgotpwd/>} />
+          <Route path="/chats" element={<Chats />} />
+          <Route path="/forgotpwd" element={<Forgotpwd />} />
           {/* <Route path="/" component={Login} /> */}
         </Routes>
       </Router>
