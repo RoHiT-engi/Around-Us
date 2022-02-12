@@ -224,7 +224,7 @@ const Navbar = (props) => {
                   </Button>
                 </Link>
                 <Link
-                  to="/quiz"
+                  to="/chat"
                   style={{
                     textDecoration: "none",
                   }}

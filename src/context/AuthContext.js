@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
       setUser(user); //setting user from firebase
       setLoading(false);
       if (user) {
-        history("/chats");
+        history("/chat");
       } //router dom to push to chat page
     });
   }, [user, history]);
