@@ -15,6 +15,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import { signInWithEmailnPassword ,signInWithGoogle } from "../Firebase/Auth";
 import { Alert, Icon } from "@mui/material";
 import {useNavigate} from 'react-router-dom';
+import  "../css/Login.css"
 
 function Copyright(props) {
   return (

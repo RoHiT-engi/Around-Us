@@ -122,6 +122,8 @@ const SignUp = () => {
                   id="password"
                   autoComplete="new-password"
                 />
+                </Grid>
+                <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
