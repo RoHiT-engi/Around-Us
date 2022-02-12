@@ -51,12 +51,17 @@ const Login = () => {
     }
     // eslint-disable-next-line no-console
   };
+  
 
   return (
     <div>
-      <div>
+      <div style={{ position: "relative" }}>
         <Link to="/">
-          <button size="lg" className="btn btn-outline-dark back-btn">
+          <button
+            size="lg"
+            className="btn btn-outline-dark back-btn"
+            style={{ position: "absolute" }}
+          >
             <i className="fa fa-angle-double-left"></i> Back{" "}
           </button>
         </Link>
