@@ -14,6 +14,7 @@ import Typography from "@mui/material/Typography";
 import GoogleIcon from "@mui/icons-material/Google";
 import { signInWithEmailnPassword } from "../Firebase/Auth";
 import { Icon } from "@mui/material";
+import '../css/Login.css'
 
 function Copyright(props) {
   return (

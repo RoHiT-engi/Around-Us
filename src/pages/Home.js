@@ -12,6 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
+import '../css/Home.css'
 const pages = ["Home", "Login", "Sign Up"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -35,9 +36,10 @@ const Home = () => {
   };
 
   return (
-    <div>
+    
+    <div div className="navMenu" >
       {/* Navbar Starts */}
-      <AppBar position="static">
+      <AppBar  position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Typography
@@ -140,7 +142,7 @@ const Home = () => {
                 Forums
               </Button>
             </Box>
-
+           
             {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -174,8 +176,11 @@ const Home = () => {
         </Container>
       </AppBar>
       {/* Navbar Ends here */}
-      <div>Home Page. COMING SOON.</div>
-    </div>
+      
+      <div className="page">
+        <p>Home Page. COMING SOON</p>
+        </div>
+        </div>
   );
 };
 
