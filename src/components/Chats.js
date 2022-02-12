@@ -4,7 +4,7 @@ import { ChatEngine } from "react-chat-engine";
 import { getAuth } from "firebase/auth";
 import { useAuth } from "../context/AuthContext";
 import axios from "axios";
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
 
 const Chats = () => {
   const auth = getAuth();
@@ -19,7 +19,7 @@ const Chats = () => {
   };
 
   useEffect(() => {
-    if (user==null) {
+    if (user == null) {
       history("/");
       // console.log("user is null"+user);
       return;
@@ -71,12 +71,13 @@ const Chats = () => {
 
   return (
     <div className="chats-page">
-      <Navbar/>
+      <Navbar />
       <div className="nav-bar">
         <div className="logo-tab">talkey</div>
         <div onClick={handleLogout} className="logout-tab">
           Logout
         </div>
+        <br />
       </div>
       <ChatEngine
         height="calc(100vh - 66px)"
