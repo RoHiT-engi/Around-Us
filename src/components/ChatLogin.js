@@ -1,4 +1,4 @@
-import { GoogleOutlined } from "@ant-design/icons";
+import { ControlOutlined, GoogleOutlined } from "@ant-design/icons";
 import {app} from "../Firebase/Auth";
 import { signInWithGoogle } from "../Firebase/Auth";
 import { getAuth } from "firebase/auth";
@@ -16,8 +16,7 @@ const Login = () => {
     }
   return (
       <>
-      {Auth.currentUser===null?
-
+      {console.log(Auth.currentUser+"Auth")}
     <div id="login-page">
       <div id="login-card">
         <h1>Welcome to Around Us Discussion Forum!</h1>
@@ -30,7 +29,7 @@ const Login = () => {
            Sign In with Google
         </div>
       </div>
-    </div>:history("/ChatForum")}
+    </div>
     </>
   );
 };

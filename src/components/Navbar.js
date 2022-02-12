@@ -211,7 +211,7 @@ const Navbar = (props) => {
                   </Button>
                 </Link>
                 <Link
-                  to="/chats"
+                  to="/chat"
                   style={{
                     textDecoration: "none",
                   }}
@@ -223,19 +223,7 @@ const Navbar = (props) => {
                     Forums
                   </Button>
                 </Link>
-                <Link
-                  to="/chat"
-                  style={{
-                    textDecoration: "none",
-                  }}
-                >
-                  <Button
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "white", display: "block" }}
-                  >
-                    Quiz
-                  </Button>
-                </Link>
+                
               </Box>
 
               {/* <Box sx={{ flexGrow: 0 }}>
