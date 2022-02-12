@@ -133,12 +133,18 @@ const Home = () => {
                   SignUp
                 </Button>
               </Link>
+              <Link
+                to="/chats"
+                style={{
+                  textDecoration: "none",
+                }}>
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 Forums
               </Button>
+              </Link>
             </Box>
 
             {/* <Box sx={{ flexGrow: 0 }}>

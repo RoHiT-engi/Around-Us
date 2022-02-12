@@ -11,6 +11,9 @@ import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import {signUpWithEmailAndPassword} from "../Firebase/Auth"
+import passwordCheck from "../helper/passwordCheck";
+import { Alert } from "@mui/material";
 
 function Copyright(props) {
   return (
@@ -21,7 +24,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="https://github.com/RoHiT-engi/Around-Us/blob/main/LICENSE">
         Your Website
       </Link>{" "}
       {new Date().getFullYear()}
@@ -31,14 +34,26 @@ function Copyright(props) {
 }
 
 const SignUp = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = async (event) => {
     const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    console.log(data.get("email"));
+    console.log(data.get("password"));
+    // try{
+    //   event.preventDefault();
+    //   const data = new FormData(event.currentTarget);
+    //   if(data.get("password") === data.get("confirmPassword")){
+    //     if(passwordCheck(data.get("password"))){
+    //       await signUpWithEmailAndPassword(data.get("email"), data.get("password"));
+    //     }else{
+    //       Alert("Password is not valid")
+    //     }
+    //   }else{
+    //     Alert("Confirm your Password")
+    //   }
+      
+    // }catch(error){
+    //   alert(error)
+    // }
   };
 
   return (
@@ -107,6 +122,15 @@ const SignUp = () => {
                   id="password"
                   autoComplete="new-password"
                 />
+                <TextField
+                  required
+                  fullWidth
+                  name="confirmPassword"
+                  label="Confirm Password"
+                  type="password"
+                  id="confirmPassword"
+                  autoComplete="new-password"
+                />
               </Grid>
               <Grid item xs={12}>
                 <FormControlLabel
@@ -121,6 +145,7 @@ const SignUp = () => {
               type="submit"
               fullWidth
               variant="contained"
+              onSubmit={SignUp}
               sx={{ mt: 3, mb: 2 }}
             >
               Sign Up
