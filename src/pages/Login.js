@@ -12,8 +12,9 @@ import Grid from "@mui/material/Grid";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import GoogleIcon from "@mui/icons-material/Google";
-import { signInWithEmailnPassword } from "../Firebase/Auth";
-import { Icon } from "@mui/material";
+import { signInWithEmailnPassword ,signInWithGoogle } from "../Firebase/Auth";
+import { Alert, Icon } from "@mui/material";
+import {useNavigate} from 'react-router-dom';
 
 function Copyright(props) {
   return (
@@ -33,11 +34,13 @@ function Copyright(props) {
   );
 }
 const Login = () => {
+  const history = useNavigate();
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
       const data = new FormData(event.currentTarget);
       await signInWithEmailnPassword(data.get("email"), data.get("password"));
+      history('/');
     } catch (error) {
       alert("Error Occured " + error);
     }
@@ -126,18 +129,27 @@ const Login = () => {
                 type="submit"
                 fullWidth
                 variant="contained"
+                onClick={async () => {
+                  try{
+                    await signInWithGoogle();
+                    history('/');
+                  }catch(e){
+                    Alert("Error Occured " + e);
+                  }
+
+                } }
                 sx={{ mt: 3, mb: 2 }}
               >
                 <GoogleIcon />
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
+                  <Link href="/forgotpwd" variant="body2">
                     Forgot password?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href="/signup" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
