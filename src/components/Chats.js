@@ -14,12 +14,12 @@ const Chats = () => {
   const handleLogout = async () => {
     await auth.signOut();
     //logging out
-    history.push("/");
+    history("/");
   };
 
   useEffect(() => {
     if (!user) {
-      history.push("/");
+      history("/");
       return;
     }
     const getFile = async (url) => {

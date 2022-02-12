@@ -4,7 +4,7 @@ import SignUp from "./pages/SignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import Chats from "./components/Chats";
+import Forum from "./components/Forum";
 import Quiz from "./pages/Quiz";
 
 
@@ -20,9 +20,8 @@ function App() {
           <Route path="/login" element={<Login />} />
 
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/chats" element={<Chats />} />
           <Route path="/quiz" element={<Quiz />} />
-          <Route path="/chats" element={<Chats/>} />
+          <Route path="/chats" element={<Forum/>} />
           <Route path="/forgotpwd" element={<Forgotpwd/>} />
           {/* <Route path="/" component={Login} /> */}
         </Routes>

@@ -36,24 +36,23 @@ function Copyright(props) {
 const SignUp = () => {
   const handleSubmit = async (event) => {
     const data = new FormData(event.currentTarget);
-    console.log(data.get("email"));
-    console.log(data.get("password"));
-    // try{
-    //   event.preventDefault();
-    //   const data = new FormData(event.currentTarget);
-    //   if(data.get("password") === data.get("confirmPassword")){
-    //     if(passwordCheck(data.get("password"))){
-    //       await signUpWithEmailAndPassword(data.get("email"), data.get("password"));
-    //     }else{
-    //       Alert("Password is not valid")
-    //     }
-    //   }else{
-    //     Alert("Confirm your Password")
-    //   }
+    
+    try{
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      if(data.get("password") === data.get("confirmPassword")){
+        if(passwordCheck(data.get("password"))){
+          await signUpWithEmailAndPassword(data.get("email"), data.get("password"));
+        }else{
+          alert("Password is not valid")
+        }
+      }else{
+        alert("Confirm your Password")
+      }
       
-    // }catch(error){
-    //   alert(error)
-    // }
+    }catch(error){
+      alert(error)
+    }
   };
 
   return (
