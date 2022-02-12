@@ -16,8 +16,6 @@ export const AuthProvider = ({ children }) => {
       setLoading(false);
       if (user) {
         history("/chats");
-      }else{
-        history("/login");
       } //router dom to push to chat page
     });
   }, [user, history]);

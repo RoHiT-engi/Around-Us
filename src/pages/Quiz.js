@@ -6,6 +6,11 @@ const Quiz = () => {
     <div>
       <Navbar />
       Quiz starts here{" "}
+
+
+      <div>
+        Question
+      </div>
     </div>
   );
 };
