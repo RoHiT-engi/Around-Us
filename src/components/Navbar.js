@@ -7,15 +7,12 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import PropTypes from "prop-types";
-const pages = ["Home", "Login", "Sign Up"];
 
 //Elevation Scroll
 function ElevationScroll(props) {
@@ -44,22 +41,22 @@ ElevationScroll.propTypes = {
 
 const Navbar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
   return (
     <React.Fragment>
       <CssBaseline />
@@ -76,12 +73,23 @@ const Navbar = (props) => {
                 variant="h6"
                 noWrap
                 component="div"
-                sx={{ mr: 2, display: { xs: "none", md: "flex",fontWeight: 'bold',color:"gold", border: 2 , borderColor: 'yellow' ,boxShadow: 2,
-                '&:hover': {
-                  color: 'yellow',  
-                },} }}
+                sx={{
+                  mr: 2,
+                  display: {
+                    xs: "none",
+                    md: "flex",
+                    fontWeight: "bold",
+                    color: "gold",
+                    border: 2,
+                    borderColor: "yellow",
+                    boxShadow: 2,
+                    "&:hover": {
+                      color: "yellow",
+                    },
+                  },
+                }}
               >
-               Around Us
+                Around Us
               </Typography>
 
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

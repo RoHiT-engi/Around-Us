@@ -1,11 +1,7 @@
 import * as React from "react";
-import { Widget } from "@typeform/embed-react";
 
 import Navbar from "../components/Navbar";
 import "../css/Home.css";
-
-const pages = ["Home", "Login", "Sign Up"];
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Home = () => {
   return (
