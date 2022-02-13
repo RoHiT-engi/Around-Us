@@ -76,9 +76,12 @@ const Navbar = (props) => {
                 variant="h6"
                 noWrap
                 component="div"
-                sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+                sx={{ mr: 2, display: { xs: "none", md: "flex",fontWeight: 'bold',color:"gold", border: 2 , borderColor: 'yellow' ,boxShadow: 2,
+                '&:hover': {
+                  color: 'yellow',  
+                },} }}
               >
-                LOGO
+               Around Us
               </Typography>
 
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -168,7 +171,7 @@ const Navbar = (props) => {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
               >
-                LOGO
+                Around Us
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
                 <Link
