@@ -110,7 +110,7 @@ const Home = () => {
                   <QuizIcon fontSize="large" sx={{ color: "#E07529" }} />
                 </Typography>
                 <Typography sx={{ fontSize: "x-large" }}>Quiz</Typography>
-                <Typography className="blog_desc" sx={{ fontSize: "medium" }}>
+                <Typography className="blog_desc" sx={{ fontSize: "large" }}>
                   Want to find out what type of Imposter are you?Take this quiz
                 </Typography>
               </CardContent>
@@ -155,73 +155,6 @@ const Home = () => {
               description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor."
             />
           </Box>
-        </div>
-
-        <div class="div2">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm">
-                <div class="blog_post">
-                  <div class="container_copy">
-                    <h1 class="blog_h1">Name</h1>
-                    <br />
-                    <h3 class="blog_h3">12 January 2019</h3>
-                    <br />
-                    <h2 class="blog_h2">CSS Positioning</h2>
-                    <h4 class="blog_h4">
-                      The position property specifies the type of positioning
-                      method used for an element (static, relative, absolute,
-                      fixed, or sticky).
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm">
-                <div class="blog_post">
-                  <div class="container_copy">
-                    <h1 class="blog_h1">Name</h1>
-                    <br />
-                    <h3 class="blog_h3">12 January 2019</h3>
-                    <br />
-                    <h2 class="blog_h2">CSS Positioning</h2>
-                    <h4 class="blog_h4">
-                      The position property specifies the type of positioning
-                      method used for an element (static, relative, absolute,
-                      fixed, or sticky).
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm">
-                <div class="blog_post">
-                  <div class="container_copy">
-                    <h1 class="blog_h1">Name</h1>
-                    <br />
-                    <h3 class="blog_h3">12 January 2019</h3>
-                    <br />
-                    <h2 class="blog_h2">CSS Positioning</h2>
-                    <h4 class="blog_h4">
-                      The position property specifies the type of positioning
-                      method used for an element (static, relative, absolute,
-                      fixed, or sticky).
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <br />
-            </div>
-            <br />
-          </div>
-          <div class="btn_mid">
-            -
-            <br />
-            <a class="btn_primary" id="left" href="/addblog">
-              Write a Blog
-            </a>
-            <a class="btn_primary" id="right " href="#readmore">
-              Read More
-            </a>
-          </div>
         </div>
 
         <div>
@@ -341,15 +274,15 @@ const Home = () => {
             <h2>Contact</h2>
 
             <address>
-              Ramrao Adik Institute of Technology, Nerul, Navi Mumbai.<br />
-
-              <a class="footer__btn" href="mailto:pranavyede@gmail.com">Email Us</a>
+              Ramrao Adik Institute of Technology, Nerul, Navi Mumbai.
+              <br />
+              <a class="footer__btn" href="mailto:pranavyede@gmail.com">
+                Email Us
+              </a>
             </address>
           </div>
 
           <ul class="footer__nav">
-
-
             <li class="nav__item nav__item--extra">
               <h2 class="nav__title">Technology</h2>
 
@@ -404,7 +337,9 @@ const Home = () => {
             <p>&copy; Around Us 2022. All rights reserved.</p>
 
             <div class="legal__links">
-              <span>Made by team Pied Piper <span class="heart">♥</span></span>
+              <span>
+                Made by team Pied Piper <span class="heart">♥</span>
+              </span>
             </div>
           </div>
         </footer>
