@@ -3,14 +3,12 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import axios from 'axios';
 import { auth } from '../Firebase/Auth';
-import { useNavigate } from 'react-router-dom';
 import '../css/BlogAdd.css';
 
 
 
 export default function BlogAdd() {
     const BASE_URI = "http://localhost:5000/"
-    const history = useNavigate();
     const [title, setTitle] = React.useState('');
     const [content, setContent] = React.useState('');
     const [Description, setDescription] = React.useState('');
@@ -29,7 +27,6 @@ export default function BlogAdd() {
             })
         }else{
             alert("Please Login First");
-            history('/login');
         }
     }
 
