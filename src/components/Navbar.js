@@ -1,5 +1,7 @@
 import AppBar from "@mui/material/AppBar";
 import * as React from "react";
+import Tooltip from "@mui/material/Tooltip";
+import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -13,8 +15,8 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import PropTypes from "prop-types";
-import {auth} from "../Firebase/Auth";
-import {useState} from "react"
+import { auth } from "../Firebase/Auth";
+import { useState } from "react";
 
 //Elevation Scroll
 function ElevationScroll(props) {
@@ -43,34 +45,42 @@ ElevationScroll.propTypes = {
 
 const Navbar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [login, setLogin] = useState("Login");
-  // const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [login, setLogin] = React.useState("Login");
+  const [name, setName] = React.useState("Name");
+
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-  
-  const HandleLogin = () => {
-    if(auth.currentUser!=null){
-      setLogin("Logout");
+  //Name here dynamically changes based on user login**************
+  const HandleName = () => {
+    if (auth.currentUser) {
+      setName(auth.currentUser.displayName);
+    } else {
+      setName("Profile");
+    }
+  };
 
-    }else{
+  const HandleLogin = () => {
+    if (auth.currentUser != null) {
+      setLogin("Logout");
+    } else {
       setLogin("login");
     }
     // handleCloseNavMenu();
-  }
+  };
 
-
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
   return (
     <React.Fragment>
       <CssBaseline />
@@ -83,31 +93,35 @@ const Navbar = (props) => {
         >
           <Container maxWidth="xl">
             <Toolbar disableGutters>
-              <Link to="/" style={{
-                      textDecoration: "none",
-                    }}>
-              <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{
-                  mr: 2,
-                  display: {
-                    xs: "none",
-                    md: "flex",
-                    fontWeight: "bold",
-                    color: "gold",
-                    border: 2,
-                    borderColor: "yellow",
-                    boxShadow: 2,
-                    "&:hover": {
-                      color: "yellow",
-                    },
-                  },
+              <Link
+                to="/"
+                style={{
+                  textDecoration: "none",
                 }}
               >
-                Around Us
-              </Typography></Link>
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="div"
+                  sx={{
+                    mr: 2,
+                    display: {
+                      xs: "none",
+                      md: "flex",
+                      fontWeight: "bold",
+                      color: "gold",
+                      border: 2,
+                      borderColor: "yellow",
+                      boxShadow: 2,
+                      "&:hover": {
+                        color: "yellow",
+                      },
+                    },
+                  }}
+                >
+                  Around Us
+                </Typography>
+              </Link>
 
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                 <IconButton
@@ -138,12 +152,9 @@ const Navbar = (props) => {
                     display: { xs: "block", md: "none" },
                   }}
                 >
-                  
-                  
-                    <MenuItem onClick={HandleLogin}>
-                      <Typography textAlign="center">{login}</Typography>
-                    </MenuItem>{" "}
-                  
+                  <MenuItem onClick={HandleLogin} sx={{ float: "right" }}>
+                    <Typography textAlign="center">{login}</Typography>
+                  </MenuItem>{" "}
                   <Link
                     to="/quiz"
                     style={{
@@ -164,29 +175,34 @@ const Navbar = (props) => {
                       <Typography textAlign="center">Forums</Typography>
                     </MenuItem>
                   </Link>
+                  <MenuItem onClick={HandleName} sx={{ float: "right" }}>
+                    <Typography textAlign="center">{name}</Typography>
+                  </MenuItem>{" "}
                 </Menu>
               </Box>
-              <Link to="/" style={{
-                    textDecoration: "none",
-                  }}>
-              <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+              <Link
+                to="/"
+                style={{
+                  textDecoration: "none",
+                }}
               >
-                Around Us
-              </Typography></Link>
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="div"
+                  sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+                >
+                  Around Us
+                </Typography>
+              </Link>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-                
-                
-                  <Button
-                    onClick={HandleLogin}
-                    sx={{ my: 2, color: "white", display: "block" }}
-                  >
-                    {login}
-                  </Button>
-                
+                <Button
+                  onClick={HandleName}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  {name}
+                </Button>
+
                 <Link
                   to="/chat"
                   style={{
@@ -213,37 +229,24 @@ const Navbar = (props) => {
                     Quiz
                   </Button>
                 </Link>
+                <Button
+                  onClick={HandleLogin}
+                  sx={{
+                    my: 2,
+                    color: "white",
+                    display: "block",
+                    float: "right",
+                  }}
+                >
+                  {login}
+                </Button>
               </Box>
 
-              {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+              <Box sx={{ flexGrow: 0 }}>
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Logout</Typography>
                 </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
+              </Box>
             </Toolbar>
           </Container>
         </AppBar>
