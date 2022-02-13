@@ -1,0 +1,7 @@
+.blog-area {
+  margin-top: 80px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
