@@ -12,6 +12,7 @@ import ForumChat from "./components/Chats";
 import BlogAdd from "./pages/BlogAdd";
 import BlogPage from "./pages/BlogPage";
 import Dashboard from "./pages/Dashboard";
+// import BlogPage from "./pages/BlogPage";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/blogpage" element={<BlogPage />} />
           {/* <Route path="/blogpage" element={<BlogPage />} /> */}
           <Route path="/dashboard" element={<Dashboard />} />
+          {/* <Route path="/blogpage" element={<BlogPage />} /> */}
         </Routes>
       </Router>
     </div>
