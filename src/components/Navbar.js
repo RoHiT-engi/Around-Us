@@ -1,20 +1,10 @@
-import AppBar from "@mui/material/AppBar";
 import * as React from "react";
-import Tooltip from "@mui/material/Tooltip";
-import Avatar from "@mui/material/Avatar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import CssBaseline from "@mui/material/CssBaseline";
-import MenuItem from "@mui/material/MenuItem";
+
 import { Link, useNavigate } from "react-router-dom";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { Navbar, Container, Form, Button, FormControl, Nav, NavDropdown} from 'react-bootstrap'
+import { Navbar} from 'react-bootstrap'
 import { auth,logout } from '../Firebase/Auth';
 import { LinkContainer } from 'react-router-bootstrap'
 import '../css/Navbar2.css'
