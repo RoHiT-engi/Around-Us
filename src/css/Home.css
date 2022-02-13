@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap");
 .page {
   background: linear-gradient(-45deg, #93b7e0, #90ced3, #a0d8fd, #95fbff);
-  background-size: 1000% 1000%;
+  background-size: 5000% 5000%;
   animation: gradient 10s ease infinite;
   height: auto;
 }
@@ -97,9 +98,6 @@
   box-shadow: 0px 5px 1rem rgba(94, 164, 255, 0.5);
 }
 
-.div3 {
-}
-
 .div2 {
   padding-top: 100px;
   padding-bottom: 200px;
@@ -111,4 +109,65 @@
 
 #right {
   float: right;
+}
+
+.div3 {
+  font-family: "Montserrat", sans-serif;
+  background: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  text-align: center;
+  height: auto;
+}
+h1 {
+  line-height: 1.2;
+  margin-bottom: 60px;
+}
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+summary {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background-color: #b1a6e2;
+  color: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border-radius: 0.25rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+details > summary::after {
+  position: absolute;
+  content: "+";
+  right: 20px;
+}
+details[open] > summary::after {
+  position: absolute;
+  content: "-";
+  right: 20px;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+p {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
 }
