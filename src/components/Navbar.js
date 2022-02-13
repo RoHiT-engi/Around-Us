@@ -152,7 +152,7 @@ const Navbar = (props) => {
                     display: { xs: "block", md: "none" },
                   }}
                 >
-                  <MenuItem onClick={HandleLogin} sx={{ float: "right" }}>
+                  <MenuItem onClick={HandleLogin}>
                     <Typography textAlign="center">{login}</Typography>
                   </MenuItem>{" "}
                   <Link
@@ -175,7 +175,7 @@ const Navbar = (props) => {
                       <Typography textAlign="center">Forums</Typography>
                     </MenuItem>
                   </Link>
-                  <MenuItem onClick={HandleName} sx={{ float: "right" }}>
+                  <MenuItem onClick={HandleName}>
                     <Typography textAlign="center">{name}</Typography>
                   </MenuItem>{" "}
                 </Menu>
@@ -196,13 +196,6 @@ const Navbar = (props) => {
                 </Typography>
               </Link>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-                <Button
-                  onClick={HandleName}
-                  sx={{ my: 2, color: "white", display: "block" }}
-                >
-                  {name}
-                </Button>
-
                 <Link
                   to="/chat"
                   style={{
@@ -235,7 +228,6 @@ const Navbar = (props) => {
                     my: 2,
                     color: "white",
                     display: "block",
-                    float: "right",
                   }}
                 >
                   {login}
@@ -243,7 +235,20 @@ const Navbar = (props) => {
               </Box>
 
               <Box sx={{ flexGrow: 0 }}>
-                <MenuItem onClick={handleCloseUserMenu}>
+                <MenuItem
+                  onClick={HandleName}
+                  sx={{
+                    color: "white",
+                    float: "right",
+                    display: { xs: "none", md: "flex" },
+                  }}
+                >
+                  {name}
+                </MenuItem>
+                <MenuItem
+                  onClick={handleCloseUserMenu}
+                  sx={{ display: { xs: "none", md: "flex" } }}
+                >
                   <Typography textAlign="center">Logout</Typography>
                 </MenuItem>
               </Box>

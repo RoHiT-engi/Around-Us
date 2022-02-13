@@ -8,8 +8,9 @@
   height: auto;
 }
 .div1 {
-  margin-bottom: 200px;
+  margin-bottom: 10px;
   padding-top: 20vh;
+  text-align: center;
 }
 
 .title {
@@ -21,11 +22,18 @@
 
 #a {
   font-family: "Montserrat", sans-serif;
-  font-size: 25px;
+  font-size: 40px;
+  font-weight: 800;
 }
 #b {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 26px;
+  font-size: 30px;
+  font-weight: 700;
+}
+#c {
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  font-weight: 650;
 }
 
 @keyframes gradient {
@@ -47,7 +55,7 @@
 .blog_post {
   position: relative;
   padding: 4rem 2rem 4rem 2rem;
-  background: #fff;
+  background: #085486;
   max-width: 350px;
   border-radius: 10px;
   top: 50%;
@@ -121,6 +129,13 @@
   text-align: center;
   height: auto;
 }
+
+.div4 {
+  padding-top: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
 h1 {
   line-height: 1.2;
   margin-bottom: 60px;
