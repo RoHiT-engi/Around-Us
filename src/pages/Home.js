@@ -230,6 +230,82 @@ const Home = () => {
           </body>
         </div>
       </div>
+      <div>
+        <footer class="footer">
+          <div class="footer__addr">
+            <h1 class="footer__logo">Around Us</h1>
+
+            <h2>Contact</h2>
+
+            <address>
+              Ramrao Adik Institute of Technology, Nerul, Navi Mumbai.<br />
+
+              <a class="footer__btn" href="mailto:pranavyede@gmail.com">Email Us</a>
+            </address>
+          </div>
+
+          <ul class="footer__nav">
+
+
+            <li class="nav__item nav__item--extra">
+              <h2 class="nav__title">Technology</h2>
+
+              <ul class="nav__ul nav__ul--extra">
+                <li>
+                  <a href="#">Stacks</a>
+                </li>
+
+                <li>
+                  <a href="#">Software Design</a>
+                </li>
+
+                <li>
+                  <a href="#">Digital Signage</a>
+                </li>
+                <ul />
+
+                <li>
+                  <a href="#">Facebook</a>
+                </li>
+
+                <li>
+                  <a href="#">Instagram</a>
+                </li>
+
+                <li>
+                  <a href="#">Twitter</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav__item">
+              <h2 class="nav__title">Legal</h2>
+
+              <ul class="nav__ul">
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+
+                <li>
+                  <a href="#">Terms of Use</a>
+                </li>
+
+                <li>
+                  <a href="#">Sitemap</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="legal">
+            <p>&copy; Around Us 2022. All rights reserved.</p>
+
+            <div class="legal__links">
+              <span>Made by team Pied Piper <span class="heart">♥</span></span>
+            </div>
+          </div>
+        </footer>
+      </div>
     </>
   );
 };
