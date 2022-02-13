@@ -10,7 +10,7 @@ import Forgotpwd from "./pages/ForgotpwdScreen";
 import Chats from "./components/ChatLogin";
 import ForumChat from "./components/Chats";
 import BlogAdd from "./pages/BlogAdd";
-import BlogPage from "./pages/BlogPage";
+// import BlogPage from "./pages/BlogPage"; 
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
           <Route path="/chat" element={<Chats/>} />
           <Route path="/ChatForum" element={<ForumChat/>} />
           <Route path="/addblog" element={<BlogAdd />} />
-          <Route path="/blogpage" element={<BlogPage />} />
+          {/* <Route path="/blogpage" element={<BlogPage />} /> */}
         </Routes>
       </Router>
     </div>
