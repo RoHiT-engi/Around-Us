@@ -111,7 +111,7 @@ const Home = () => {
                 </Typography>
                 <Typography sx={{ fontSize: "x-large" }}>Quiz</Typography>
                 <Typography className="blog_desc" sx={{ fontSize: "large" }}>
-                  Want to find out what type of Imposter are you?Take this quiz
+                  Take this quiz to find out what kind of imposter you are.
                 </Typography>
               </CardContent>
               <CardActions>
