@@ -55,7 +55,7 @@
 .blog_post {
   position: relative;
   padding: 4rem 2rem 4rem 2rem;
-  background: #085486;
+  background: #fffafa;
   max-width: 350px;
   border-radius: 10px;
   top: 50%;
@@ -80,7 +80,7 @@
   margin: 0 0 1rem 0;
   font-size: 2rem;
   letter-spacing: 0.5px;
-  color: rgb(116, 111, 111);
+  color: #020202;
 }
 .blog_p {
   margin: 0 0 4.5rem 2rem;
@@ -92,18 +92,18 @@
   border: none;
   outline: none;
   float: right;
-  background: linear-gradient(-45deg, #a193e0, #909cd3);
+  background: #f8fbf8;
   padding: 1.5rem 2rem;
   border-radius: 30px;
-  color: white;
+  color: black;
   font-size: 1.2rem;
-  box-shadow: 1px 10px 2rem rgba(105, 94, 255, 0.5);
+  box-shadow: 10px #020202;
   transition: all 0.2s ease-in;
   text-decoration: none;
 }
 
 .btn_primary:hover {
-  box-shadow: 0px 5px 1rem rgba(94, 164, 255, 0.5);
+  box-shadow: 10px #020202;
 }
 
 .div2 {
@@ -128,12 +128,14 @@
   letter-spacing: 0.5px;
   text-align: center;
   height: auto;
+  overflow: hidden;
 }
 
 .div4 {
   padding-top: 60px;
   display: block;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 h1 {
@@ -147,7 +149,7 @@ main {
 summary {
   font-size: 1.5rem;
   font-weight: 800;
-  background-color: #b1a6e2;
+  background-color: #fbfffb;
   color: #333;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -185,8 +187,14 @@ details > summary::-webkit-details-marker {
 }
 p {
   font-family: "Zen Kaku Gothic Antique", sans-serif;
+  text-align: left;
 }
 
-.page_2 {
-  background-color: #fff;
+.FAQ_heading {
+  padding-bottom: 20px;
+  font-size: 54px;
+  font-weight: 800;
+}
+.faq_text {
+  background: #fffafa;
 }

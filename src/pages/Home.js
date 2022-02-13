@@ -43,81 +43,81 @@ const Home = () => {
         </div>
         <br />
         {/* <span class="line_break">********************************</span> */}
-        <div class="page_2">
-          <div class="div2">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm">
-                  <div class="blog_post">
-                    <div class="container_copy">
-                      <h1 class="blog_h1">Name</h1>
-                      <br />
-                      <h3 class="blog_h3">12 January 2019</h3>
-                      <br />
-                      <h2 class="blog_h2">CSS Positioning</h2>
-                      <h4 class="blog_h4">
-                        The position property specifies the type of positioning
-                        method used for an element (static, relative, absolute,
-                        fixed, or sticky).
-                      </h4>
-                    </div>
+
+        <div class="div2">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div class="blog_post">
+                  <div class="container_copy">
+                    <h1 class="blog_h1">Name</h1>
+                    <br />
+                    <h3 class="blog_h3">12 January 2019</h3>
+                    <br />
+                    <h2 class="blog_h2">CSS Positioning</h2>
+                    <h4 class="blog_h4">
+                      The position property specifies the type of positioning
+                      method used for an element (static, relative, absolute,
+                      fixed, or sticky).
+                    </h4>
                   </div>
                 </div>
-                <div class="col-sm">
-                  <div class="blog_post">
-                    <div class="container_copy">
-                      <h1 class="blog_h1">Name</h1>
-                      <br />
-                      <h3 class="blog_h3">12 January 2019</h3>
-                      <br />
-                      <h2 class="blog_h2">CSS Positioning</h2>
-                      <h4 class="blog_h4">
-                        The position property specifies the type of positioning
-                        method used for an element (static, relative, absolute,
-                        fixed, or sticky).
-                      </h4>
-                    </div>
+              </div>
+              <div class="col-sm">
+                <div class="blog_post">
+                  <div class="container_copy">
+                    <h1 class="blog_h1">Name</h1>
+                    <br />
+                    <h3 class="blog_h3">12 January 2019</h3>
+                    <br />
+                    <h2 class="blog_h2">CSS Positioning</h2>
+                    <h4 class="blog_h4">
+                      The position property specifies the type of positioning
+                      method used for an element (static, relative, absolute,
+                      fixed, or sticky).
+                    </h4>
                   </div>
                 </div>
-                <div class="col-sm">
-                  <div class="blog_post">
-                    <div class="container_copy">
-                      <h1 class="blog_h1">Name</h1>
-                      <br />
-                      <h3 class="blog_h3">12 January 2019</h3>
-                      <br />
-                      <h2 class="blog_h2">CSS Positioning</h2>
-                      <h4 class="blog_h4">
-                        The position property specifies the type of positioning
-                        method used for an element (static, relative, absolute,
-                        fixed, or sticky).
-                      </h4>
-                    </div>
+              </div>
+              <div class="col-sm">
+                <div class="blog_post">
+                  <div class="container_copy">
+                    <h1 class="blog_h1">Name</h1>
+                    <br />
+                    <h3 class="blog_h3">12 January 2019</h3>
+                    <br />
+                    <h2 class="blog_h2">CSS Positioning</h2>
+                    <h4 class="blog_h4">
+                      The position property specifies the type of positioning
+                      method used for an element (static, relative, absolute,
+                      fixed, or sticky).
+                    </h4>
                   </div>
                 </div>
-                <br />
               </div>
               <br />
-              <div>
-                <a class="btn_primary" id="left" href="#blog">
-                  Write a Blog
-                </a>
-                <a class="btn_primary" id="right " href="#readmore">
-                  Read More
-                </a>
-              </div>
+            </div>
+            <br />
+            <div>
+              <a class="btn_primary" id="left" href="#blog">
+                Write a Blog
+              </a>
+              <a class="btn_primary" id="right " href="#readmore">
+                Read More
+              </a>
             </div>
           </div>
         </div>
 
         <div>
           <body class="div3">
-            <h1>FAQ's about Imposter Syndrome</h1>
+            <h1 class="FAQ_heading">FAQ's</h1>
+            <br />
             <main>
               <details>
                 <summary>What is Impostor Syndrome?</summary>
                 <div class="faq__content">
-                  <p>
+                  <p class="faq__text">
                     People suffering from impostor syndrome doubt their skills
                     and accomplishments, live in fear of being exposed as not
                     worthy of their position, and even downplay their success,
