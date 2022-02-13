@@ -1,7 +1,7 @@
-import { TextField, Button } from "@mui/material";
 import React from "react";
 import Navbar from "../components/Navbar";
 import '../css/Dashboard.css';
+import { TextField, Button } from "@mui/material";
 
 
 export default function Dashboard() {
@@ -12,11 +12,11 @@ export default function Dashboard() {
         <div className="container">
         <div className="column">
                 <h5>Your Profile</h5>
-                {/* <TextField variant="outline"  /> */}
-            </div>
+                <TextField variant="outlined"  />
+        </div>
             <div className="column">
                 <h5>Your Blogs</h5>
-                {/* <BlogListCard title="Blog Name" /> */}
+                <BlogListCard title="Blog Name" />
             </div>
         </div>
             

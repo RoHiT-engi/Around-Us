@@ -29,7 +29,6 @@ function App() {
           <Route path="/ChatForum" element={<ForumChat/>} />
           <Route path="/addblog" element={<BlogAdd />} />
           <Route path="/blogpage" element={<BlogPage />} />
-          {/* <Route path="/blogpage" element={<BlogPage />} /> */}
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
