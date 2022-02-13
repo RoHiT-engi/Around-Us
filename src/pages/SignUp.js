@@ -14,6 +14,7 @@ import Container from "@mui/material/Container";
 import {signUpWithEmailAndPassword} from "../Firebase/Auth"
 import passwordCheck from "../helper/passwordCheck";
 import { Alert } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -34,14 +35,18 @@ function Copyright(props) {
 }
 
 const SignUp = () => {
+  const history = useNavigate()
   const handleSubmit = async (event) => {
     try{
       event.preventDefault();
       const data = new FormData(event.currentTarget);
+      localStorage.setItem("name", data.get("firstName"));
+      localStorage.setItem("lastName", data.get("lastName"));
       if(data.get("password") === data.get("confirmPassword")){
         const status = passwordCheck(data.get("password"))
         if(status === true){
           await signUpWithEmailAndPassword(data.get("email"), data.get("password"));
+          history("/");
         }else{
           alert("Password is not valid "+status)
         }
@@ -145,7 +150,6 @@ const SignUp = () => {
               type="submit"
               fullWidth
               variant="contained"
-              onSubmit={SignUp}
               sx={{ mt: 3, mb: 2 }}
             >
               Sign Up

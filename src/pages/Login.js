@@ -146,7 +146,6 @@ const Login = () => {
                 Login with{" "}
               </Typography>
               <Button
-                type="submit"
                 fullWidth
                 variant="contained"
                 onClick={async () => {
