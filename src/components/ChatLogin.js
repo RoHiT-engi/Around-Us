@@ -56,17 +56,7 @@ const Login = () => {
       <div>
         <div>
           <Navbar />
-        </div>
-        ****Commenting stuff for styling*****
-        {/* <div id="login-card">
-          <h2>Peepoopeepooo! Make way for the Discussion Forum!</h2>
-          <p>Talk, Relate, and Vibe with people like us. </p>
-          <br />
-          <button className="login-button google" onClick={handleGoogleSignIn}>
-            Sign In with <GoogleOutlined />
-          </button>
-        </div> */}
-        <div>
+        
           <Grid container component="main" sx={{ height: "100vh" }}>
             <CssBaseline />
             <Grid
