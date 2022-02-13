@@ -129,30 +129,30 @@ const Home = () => {
         <div className="card_area">
           <Box sx={{ minWidth: 275 }}>
             <BlogCardHome
-              authName="Aarya"
-              title="Aarya's Blog"
-              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor."
+              authName="11/02/2022"
+              title="Sasha Grey"
+              description="“It’s hard for me to give thorough/complete updates during scrum because I feel like I haven’t accomplished much. My teammates are usually the ones to point out [that I have].”"
             />
           </Box>
           <Box sx={{ minWidth: 275 }}>
             <BlogCardHome
-              authName="Aarya"
-              title="Aarya's Blog"
-              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor."
+              authName="13/02/2022"
+              title="John Reign"
+              description="I question my knowledge of subjects well within my expertise to the point of deferring to the opinions of others who do not have my level of expertise."
             />
           </Box>
           <Box sx={{ minWidth: 275 }}>
             <BlogCardHome
-              authName="Aarya"
-              title="Aarya's Blog"
-              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor."
+              authName="11/02/2022"
+              title="Sean Bush"
+              description="I find it very hard to describe [imposter syndrome]. You could say that it was motivating and demotivating at the same time. I feel like I’m constantly chasing a ghost version of myself"
             />
           </Box>
           <Box sx={{ minWidth: 275 }}>
             <BlogCardHome
-              authName="Aarya"
-              title="Aarya's Blog"
-              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor."
+              authName="12/02/2022"
+              title="Anonymous"
+              description="“This feeling makes me want to leave my current career and has made me contemplate going back to school and taking on a different job.”"
             />
           </Box>
         </div>
