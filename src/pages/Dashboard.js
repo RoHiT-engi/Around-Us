@@ -12,7 +12,7 @@ export default function Dashboard() {
         <div className="container">
         <div className="column">
                 <h5>Your Profile</h5>
-                <TextField variant="outline" />
+                <TextField variant="outline"  />
             </div>
             <div className="column">
                 <h5>Your Blogs</h5>

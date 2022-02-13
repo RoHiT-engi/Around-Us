@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { Navbar} from 'react-bootstrap'
+import { Navbar, Nav, NavDropdown} from 'react-bootstrap'
 import { auth,logout } from '../Firebase/Auth';
 import { LinkContainer } from 'react-router-bootstrap'
 import '../css/Navbar2.css'
