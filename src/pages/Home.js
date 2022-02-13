@@ -15,7 +15,7 @@ const Home = () => {
         <div className="div1">
           <h1 id="a">Do you feel that what you do is never good enough?</h1>
 
-          <h2 id="a">Then you may be suffering from Imposter Syndrome </h2>
+          <h2 id="c">Then you may be suffering from Imposter Syndrome </h2>
           <br />
           <h2 id="b">
             Imposter Syndrome affects your sense of self worth, happiness,
@@ -28,8 +28,10 @@ const Home = () => {
             <br />
           </h2>
         </div>
+        <div class="div4">
+        <center><iframe width="700" height="400" src="https://www.youtube.com/embed/ZQUxL4Jm1Lo" frameborder="50" allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+        </div>
 
-        
         <div class="div2">
           <div class="container">
             <div class="row">
@@ -100,7 +102,7 @@ const Home = () => {
         <body class="div3">
   <h1>FAQ's about Imposter Syndrome</h1>
   <main>
-  <details open>
+  <details>
     <summary>What is Impostor Syndrome?</summary>
     <div class="faq__content">
       <p>People suffering from impostor syndrome doubt their skills and accomplishments, live in fear of being exposed as not worthy of their position, and even downplay their success, attributing it all to luck or good fortune.</p>
@@ -158,7 +160,8 @@ const Home = () => {
    </main>
 </body>
 
-        </div>
+      </div>
+      
         </div>
     </>
   );
