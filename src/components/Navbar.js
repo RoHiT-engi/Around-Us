@@ -13,6 +13,8 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import PropTypes from "prop-types";
+import {auth} from "../Firebase/Auth";
+import {useState} from "react"
 
 //Elevation Scroll
 function ElevationScroll(props) {
@@ -41,6 +43,7 @@ ElevationScroll.propTypes = {
 
 const Navbar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [login, setLogin] = useState("Login");
   // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -53,6 +56,17 @@ const Navbar = (props) => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+  
+  const HandleLogin = () => {
+    if(auth.currentUser!=null){
+      setLogin("Logout");
+
+    }else{
+      setLogin("login");
+    }
+    // handleCloseNavMenu();
+  }
+
 
   // const handleCloseUserMenu = () => {
   //   setAnchorElUser(null);
@@ -69,6 +83,9 @@ const Navbar = (props) => {
         >
           <Container maxWidth="xl">
             <Toolbar disableGutters>
+              <Link to="/" style={{
+                      textDecoration: "none",
+                    }}>
               <Typography
                 variant="h6"
                 noWrap
@@ -90,7 +107,7 @@ const Navbar = (props) => {
                 }}
               >
                 Around Us
-              </Typography>
+              </Typography></Link>
 
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                 <IconButton
@@ -121,36 +138,12 @@ const Navbar = (props) => {
                     display: { xs: "block", md: "none" },
                   }}
                 >
-                  <Link
-                    to="/"
-                    style={{
-                      textDecoration: "none",
-                    }}
-                  >
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">Home</Typography>
-                    </MenuItem>
-                  </Link>
-                  <Link
-                    to="/login"
-                    style={{
-                      textDecoration: "none",
-                    }}
-                  >
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">Login</Typography>
+                  
+                  
+                    <MenuItem onClick={HandleLogin}>
+                      <Typography textAlign="center">{login}</Typography>
                     </MenuItem>{" "}
-                  </Link>
-                  <Link
-                    to="/signup"
-                    style={{
-                      textDecoration: "none",
-                    }}
-                  >
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">SignUp</Typography>
-                    </MenuItem>
-                  </Link>
+                  
                   <Link
                     to="/quiz"
                     style={{
@@ -162,7 +155,7 @@ const Navbar = (props) => {
                     </MenuItem>
                   </Link>
                   <Link
-                    to="/chats"
+                    to="/chat"
                     style={{
                       textDecoration: "none",
                     }}
@@ -173,6 +166,9 @@ const Navbar = (props) => {
                   </Link>
                 </Menu>
               </Box>
+              <Link to="/" style={{
+                    textDecoration: "none",
+                  }}>
               <Typography
                 variant="h6"
                 noWrap
@@ -180,47 +176,17 @@ const Navbar = (props) => {
                 sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
               >
                 Around Us
-              </Typography>
+              </Typography></Link>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-                <Link
-                  to="/"
-                  style={{
-                    textDecoration: "none",
-                  }}
-                >
+                
+                
                   <Button
-                    onClick={handleCloseNavMenu}
+                    onClick={HandleLogin}
                     sx={{ my: 2, color: "white", display: "block" }}
                   >
-                    Home
+                    {login}
                   </Button>
-                </Link>
-                <Link
-                  to="/login"
-                  style={{
-                    textDecoration: "none",
-                  }}
-                >
-                  <Button
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "white", display: "block" }}
-                  >
-                    Login
-                  </Button>
-                </Link>
-                <Link
-                  to="/signup"
-                  style={{
-                    textDecoration: "none",
-                  }}
-                >
-                  <Button
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "white", display: "block" }}
-                  >
-                    SignUp
-                  </Button>
-                </Link>
+                
                 <Link
                   to="/chat"
                   style={{
