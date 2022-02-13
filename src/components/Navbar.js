@@ -149,9 +149,7 @@ const Navbar = (props) => {
                     display: { xs: "block", md: "none" },
                   }}
                 >
-                  <MenuItem onClick={HandleLogin}>
-                    <Typography textAlign="center">{login}</Typography>
-                  </MenuItem>{" "}
+                  
                   <Link
                     to="/quiz"
                     style={{
@@ -219,36 +217,10 @@ const Navbar = (props) => {
                     Quiz
                   </Button>
                 </Link>
-                <Button
-                  onClick={HandleLogin}
-                  sx={{
-                    my: 2,
-                    color: "white",
-                    display: "block",
-                  }}
-                >
-                  {login}
-                </Button>
+                
               </Box>
 
-              <Box sx={{ flexGrow: 0 }}>
-                <MenuItem
-                  onClick={HandleName}
-                  sx={{
-                    color: "white",
-                    float: "right",
-                    display: { xs: "none", md: "flex" },
-                  }}
-                >
-                  {name}
-                </MenuItem>
-                <MenuItem
-                  onClick={handleCloseUserMenu}
-                  sx={{ display: { xs: "none", md: "flex" } }}
-                >
-                  <Typography textAlign="center">Logout</Typography>
-                </MenuItem>
-              </Box>
+              
             </Toolbar>
           </Container>
         </AppBar>
