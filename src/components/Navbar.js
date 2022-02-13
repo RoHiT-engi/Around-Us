@@ -226,7 +226,19 @@ const Navbar = (props) => {
                     Forums
                   </Button>
                 </Link>
-                
+                <Link
+                  to="/quiz"
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "white", display: "block" }}
+                  >
+                    Quiz
+                  </Button>
+                </Link>
               </Box>
 
               {/* <Box sx={{ flexGrow: 0 }}>
