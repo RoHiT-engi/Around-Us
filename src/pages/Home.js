@@ -10,6 +10,15 @@ const Home = () => {
         {/* Navbar Starts */}
         <Navbar />
       </div>
+      <div class="lines">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  
+
+</div>
       <div className="page">
         <div className="div1">
           <h1 id="a">Do you feel that what you do is never good enough?</h1>
