@@ -2,7 +2,9 @@ import * as React from "react";
 
 import Navbar from "../components/Navbar";
 import "../css/Home.css";
+
 import BlogAdd from "./BlogAdd";
+
 
 const Home = () => {
   return (
@@ -11,6 +13,15 @@ const Home = () => {
         {/* Navbar Starts */}
         <Navbar />
       </div>
+      <div class="lines">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  
+
+</div>
       <div className="page">
         <div className="div1">
           <h1 id="a">Do you feel that what you do is never good enough?</h1>
@@ -99,7 +110,7 @@ const Home = () => {
             </div>
             <br />
             <div>
-              <a class="btn_primary" id="left" href="#blog">
+              <a class="btn_primary" id="left" href="/addblog">
                 Write a Blog
               </a>
               <a class="btn_primary" id="right " href="#readmore">

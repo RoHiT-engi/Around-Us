@@ -1,7 +1,5 @@
 import AppBar from "@mui/material/AppBar";
 import * as React from "react";
-import Tooltip from "@mui/material/Tooltip";
-import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -16,7 +14,6 @@ import { Link } from "react-router-dom";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import PropTypes from "prop-types";
 import { auth } from "../Firebase/Auth";
-import { useState } from "react";
 
 //Elevation Scroll
 function ElevationScroll(props) {
