@@ -2,6 +2,7 @@ import * as React from "react";
 
 import Navbar from "../components/Navbar";
 import "../css/Home.css";
+import BlogAdd from './BlogAdd';
 
 const Home = () => {
   return (
