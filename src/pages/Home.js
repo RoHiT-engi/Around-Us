@@ -87,7 +87,7 @@ const Home = () => {
             </div>
             <br />
             <div>
-              <a class="btn_primary" id="left" href="#blog">
+              <a class="btn_primary" id="left" href="/addblog">
                 Write a Blog
               </a>
               <a class="btn_primary" id="right " href="#readmore">
