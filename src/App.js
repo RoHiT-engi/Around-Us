@@ -11,6 +11,8 @@ import Chats from "./components/ChatLogin";
 import ForumChat from "./components/Chats";
 import BlogAdd from "./pages/BlogAdd";
 import BlogPage from "./pages/BlogPage";
+import BlogPage from "./pages/BlogPage";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -28,6 +30,9 @@ function App() {
           <Route path="/ChatForum" element={<ForumChat/>} />
           <Route path="/addblog" element={<BlogAdd />} />
           <Route path="/blogpage" element={<BlogPage />} />
+          {/* <Route path="/blogpage" element={<BlogPage />} /> */}
+          <Route path="/blogpage" element={<BlogPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>
