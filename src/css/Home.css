@@ -11,6 +11,8 @@
   margin-bottom: 10px;
   padding-top: 20vh;
   text-align: center;
+  height: 100vh;
+  padding-top: 250px;
 }
 
 .title {
@@ -138,6 +140,7 @@
   display: block;
   margin: 0 auto;
   overflow: hidden;
+  height: 100vh;
 }
 
 h1 {
@@ -270,4 +273,13 @@ p {
   100% {
     top: 110%;
   }
+}
+
+/* Card Area CSS */
+.card_area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 40px;
+  gap: 40px;
 }
