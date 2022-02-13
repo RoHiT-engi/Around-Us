@@ -8,11 +8,14 @@ export default function Dashboard() {
     return (
         <>
         <Navbar />
-        <h1 className="title">Dashboard</h1>
+        <h1 className="title1">Dashboard</h1>
         <div className="container">
         <div className="column">
                 <h5>Your Profile</h5>
-                <TextField variant="outlined"  />
+                <TextField variant="outlined" label="Name" />
+                <TextField variant="outlined" label="Email" />
+                <Button variant="contained" color="primary">Save Changes</Button>
+                <Button variant="outlined" color="secondary">Change Password</Button>
         </div>
             <div className="column">
                 <h5>Your Blogs</h5>

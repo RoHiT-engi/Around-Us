@@ -36,7 +36,7 @@ export default function BlogAdd() {
     return (
         <>
         <Navbar />
-        <div className="container">
+        <div className="container1">
         <h2 className='write_blog'>Write your blog</h2>
         <TextField id="outlined-basic" label="Blog Title" valueLink={title} onChange={(e)=>{setTitle(e.target.value)}} variant="outlined" />
         <TextField id="outlined-basic" label="Blog Description" valueLink={content} onChange={(e)=>{setContent(e.target.value)}} variant="outlined" />
