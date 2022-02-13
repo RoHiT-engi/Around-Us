@@ -56,8 +56,12 @@ const Login = () => {
       <div>
         <div>
           <Navbar />
-        
-          <Grid container component="main" sx={{ height: "100vh" }}>
+
+          <Grid
+            container
+            component="main"
+            sx={{ height: "100vh", width: "100%", margin: "auto" }}
+          >
             <CssBaseline />
             <Grid
               item
@@ -66,7 +70,7 @@ const Login = () => {
               md={7}
               sx={{
                 backgroundImage:
-                  "url(https://c.tenor.com/OmIusPr9LJUAAAAM/welcome-to-hell-parks-and-rec.gif)",
+                  "url(https://c.tenor.com/1tK39Tm8QNkAAAAC/you-may-continue-proceed.gif)",
                 backgroundRepeat: "no-repeat",
                 backgroundColor: (t) =>
                   t.palette.mode === "light"
@@ -99,12 +103,12 @@ const Login = () => {
                     <LockOutlinedIcon />
                   </Avatar>
                 </Link>
-                <Typography component="h1" variant="h3">
-                  Peepoopeepooo!
+                <Typography variant="h4" sx={{ textAlign: "center" }}>
+                  Welcome to the Discussion Forum
                 </Typography>
                 {""}
                 <br />
-                <Typography component="h3" variant="h5">
+                <Typography component="h3" variant="h5" sx={{textAlign: "center" }}>
                   Make way for the Discussion Forum!
                 </Typography>
                 <Box noValidate sx={{ mt: 1 }}>

@@ -1,11 +1,18 @@
 import * as React from "react";
-
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Typography,
+} from "@mui/material";
 import Navbar from "../components/Navbar";
 import "../css/Home.css";
 import BlogCardHome from "../components/BlogCardHome";
 import { Box } from "@mui/material";
-
-
+import ChatIcon from "@mui/icons-material/Chat";
+import { Link } from "react-router-dom";
+import QuizIcon from "@mui/icons-material/Quiz";
 const Home = () => {
   return (
     <>
@@ -14,14 +21,12 @@ const Home = () => {
         <Navbar />
       </div>
       <div class="lines">
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  
-
-</div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
       <div className="page">
         <div className="div1">
           <h1 id="a">Do you feel that what you do is never good enough?</h1>
@@ -42,47 +47,191 @@ const Home = () => {
 
         <div class="div4">
           <center>
-            <h1 style={{marginBottom: "60px"}}>What is Imposter Syndrome?</h1>
+            <h1 style={{ marginBottom: "60px" }}>What is Imposter Syndrome?</h1>
             <iframe
               width="700"
               height="400"
-              title="yt video"
               src="https://www.youtube.com/embed/ZQUxL4Jm1Lo"
               frameborder="50"
               allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
+              title="Imposter syndrome"
             ></iframe>
           </center>
         </div>
         <br />
-        
+        <div className="card_area">
+          <Box sx={{ minWidth: 275 }}>
+            <Card
+              variant="outlined"
+              sx={{
+                backgroundColor: "white",
+                paddingLeft: "15px",
+                paddingRight: "15px",
+                paddingTop: "20px",
+                paddingBottom: "20px",
+                fontFamily: "Zen Kaku Gothic Antique",
+              }}
+            >
+              <CardContent>
+                <Typography className="auth_name" sx={{ fontSize: "xx-large" }}>
+                  <ChatIcon fontSize="large" sx={{ color: "	#006AFF" }} />
+                </Typography>
+                <Typography sx={{ fontSize: "x-large", textAlign: "left" }}>
+                  Discussion Forum
+                </Typography>
+                <Typography className="blog_desc" sx={{ fontSize: "Large" }}>
+                  Chat, Talk , Vibe and Relate with other people
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Link to="/chat" style={{ textDecoration: "none" }}>
+                  <Button size="medium" variant="contained">
+                    Click Here to Chat
+                  </Button>
+                </Link>
+              </CardActions>
+            </Card>
+          </Box>
+          <Box sx={{ minWidth: 275 }}>
+            <Card
+              variant="outlined"
+              sx={{
+                backgroundColor: "white",
+                paddingLeft: "15px",
+                paddingRight: "15px",
+                paddingTop: "20px",
+                paddingBottom: "20px",
+                fontFamily: "Zen Kaku Gothic Antique",
+              }}
+            >
+              <CardContent>
+                <Typography className="auth_name" sx={{ fontSize: "large" }}>
+                  <QuizIcon fontSize="large" sx={{ color: "#E07529" }} />
+                </Typography>
+                <Typography sx={{ fontSize: "x-large" }}>Quiz</Typography>
+                <Typography className="blog_desc" sx={{ fontSize: "medium" }}>
+                  Want to find out what type of Imposter are you?Take this quiz
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Link to="/quiz">
+                  <Button size="medium" variant="contained">
+                    Click here for Quiz
+                  </Button>
+                </Link>
+              </CardActions>
+            </Card>
+          </Box>
+        </div>
 
+        <h1 style={{ textAlign: "center" }}> Blogs</h1>
+        <div className="card_area">
+          <Box sx={{ minWidth: 275 }}>
+            <BlogCardHome
+              authName="Aarya"
+              title="Aarya's Blog"
+              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor."
+            />
+          </Box>
+          <Box sx={{ minWidth: 275 }}>
+            <BlogCardHome
+              authName="Aarya"
+              title="Aarya's Blog"
+              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor."
+            />
+          </Box>
+          <Box sx={{ minWidth: 275 }}>
+            <BlogCardHome
+              authName="Aarya"
+              title="Aarya's Blog"
+              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor."
+            />
+          </Box>
+          <Box sx={{ minWidth: 275 }}>
+            <BlogCardHome
+              authName="Aarya"
+              title="Aarya's Blog"
+              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor."
+            />
+          </Box>
+        </div>
 
-      <h1 class="FAQ_heading">Blogs</h1>
-      <div className="card_area">
-        <Box sx={{ minWidth: 275 }}>
-        <BlogCardHome authName="Aarya" title="Aarya's Blog" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor." />
-        </Box>
-        <Box sx={{ minWidth: 275 }}>
-        <BlogCardHome authName="Aarya" title="Aarya's Blog" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor." />
-        </Box>
-        <Box sx={{ minWidth: 275 }}>
-        <BlogCardHome authName="Aarya" title="Aarya's Blog" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor." />
-        </Box>
-        <Box sx={{ minWidth: 275 }}>
-        <BlogCardHome authName="Aarya" title="Aarya's Blog" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste consectetur totam ducimus tenetur repellendus, doloribus delectus asperiores? Voluptatum, quo dolor." />
-        </Box>
-      </div>
-      
+        <div class="div2">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div class="blog_post">
+                  <div class="container_copy">
+                    <h1 class="blog_h1">Name</h1>
+                    <br />
+                    <h3 class="blog_h3">12 January 2019</h3>
+                    <br />
+                    <h2 class="blog_h2">CSS Positioning</h2>
+                    <h4 class="blog_h4">
+                      The position property specifies the type of positioning
+                      method used for an element (static, relative, absolute,
+                      fixed, or sticky).
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="blog_post">
+                  <div class="container_copy">
+                    <h1 class="blog_h1">Name</h1>
+                    <br />
+                    <h3 class="blog_h3">12 January 2019</h3>
+                    <br />
+                    <h2 class="blog_h2">CSS Positioning</h2>
+                    <h4 class="blog_h4">
+                      The position property specifies the type of positioning
+                      method used for an element (static, relative, absolute,
+                      fixed, or sticky).
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="blog_post">
+                  <div class="container_copy">
+                    <h1 class="blog_h1">Name</h1>
+                    <br />
+                    <h3 class="blog_h3">12 January 2019</h3>
+                    <br />
+                    <h2 class="blog_h2">CSS Positioning</h2>
+                    <h4 class="blog_h4">
+                      The position property specifies the type of positioning
+                      method used for an element (static, relative, absolute,
+                      fixed, or sticky).
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <br />
+            </div>
+            <br />
+          </div>
+          <div class="btn_mid">
+            -
+            <br />
+            <a class="btn_primary" id="left" href="/addblog">
+              Write a Blog
+            </a>
+            <a class="btn_primary" id="right " href="#readmore">
+              Read More
+            </a>
+          </div>
+        </div>
+
         <div>
           <body class="div3">
-            <h1 class="FAQ_heading">FAQ's</h1>
-            <br />
+            <h1 class="faq_heading">FAQ's</h1>
             <main>
               <details>
                 <summary>What is Impostor Syndrome?</summary>
                 <div class="faq__content">
-                  <p class="faq__text">
+                  <p>
                     People suffering from impostor syndrome doubt their skills
                     and accomplishments, live in fear of being exposed as not
                     worthy of their position, and even downplay their success,

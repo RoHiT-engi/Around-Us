@@ -7,6 +7,10 @@
   animation: gradient 10s ease infinite;
   height: auto;
 }
+.blog_title {
+  margin: auto;
+  width: 50%;
+}
 .div1 {
   margin-bottom: 10px;
   padding-top: 20vh;
@@ -116,11 +120,9 @@
 }
 
 #left {
-  float: left;
 }
 
 #right {
-  float: right;
 }
 
 .div3 {
@@ -163,6 +165,7 @@ summary {
   text-align: left;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 details[open] summary ~ * {
   animation: sweep 0.5s ease-in-out;
@@ -195,7 +198,8 @@ p {
   text-align: left;
 }
 
-.FAQ_heading {
+.faq_heading {
+  text-align: center;
   padding-bottom: 20px;
   font-size: 54px;
   font-weight: 800;
